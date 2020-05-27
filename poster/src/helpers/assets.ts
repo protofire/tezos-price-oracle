@@ -46,7 +46,7 @@ export const updateAssets = async (assets: asset[]) => {
 
     for (let asset of assets) {
         const {symbol, price} = asset
-        const operation = await contract.methods.setPrice(symbol, `'${price}'`).send()
+        const operation = await contract.methods.setPrice(symbol, `${price}`).send()
         await operation.confirmation()
     }
 }
