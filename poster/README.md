@@ -28,28 +28,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`poster hello [FILE]`](#poster-hello-file)
+* [`poster assets [FILE]`](#poster-assets-file)
 * [`poster help [COMMAND]`](#poster-help-command)
 
-## `poster hello [FILE]`
+## `poster assets [FILE]`
 
-describe the command here
+Send prices updates from coinbase
 
 ```
 USAGE
-  $ poster hello [FILE]
+  $ poster assets [FILE]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 
 EXAMPLE
-  $ poster hello
-  hello world from ./src/hello.ts!
+  $ poster fetch
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/protofire/tezos-price-oracle/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/assets.ts](https://github.com/protofire/tezos-price-oracle/blob/v0.0.0/src/commands/assets.ts)_
 
 ## `poster help [COMMAND]`
 
