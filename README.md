@@ -5,12 +5,12 @@ The Tezos Price Oracle receives price updates from a centralized poster, who pul
 ## Contracts
 
 ### Oracle: 
-- [Better call dev link](https://better-call.dev/bigmap/carthagenet/KT1FfXi5UEZfcaSd4k7ZXpxkAeFxXDYxvqP9)
-- [Contract in the Ligo IDE online](https://ide.ligolang.org/p/ceSGJQnxzT7VreZbRshyJA)
+- [Better call dev link](https://better-call.dev/bigmap/carthagenet/KT1F3Vq3vmEne3qiadMJeZT7JA16tL4wgeoW)
+- [Contract in the Ligo IDE online](https://ide.ligolang.org/p/KlnD-FsYFR4UbYWlV3mNlA)
 
 ### Inspector:
-- [Better call dev link](https://better-call.dev/bigmap/carthagenet/KT1BGweZQgVFejJj9eqLswpy8RMiAsSff3um)
-- [Contract in the Ligo IDE online](https://ide.ligolang.org/p/C6gtpUyCn1n1Vg_6vA8SwQ)
+- [Better call dev link](https://better-call.dev/bigmap/carthagenet/KT1JYVw48yCxCoEMDe4CBM3S9N8mmeDG1y8L)
+- [Contract in the Ligo IDE online](https://ide.ligolang.org/p/H_Kj28bncDwsBGKr-wJg2Q)
 
 ## Architecture
 <img src="https://i.ibb.co/qjvdtn7/Untitled-Diagram-1.png" width="600">

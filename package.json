@@ -1,4 +1,5 @@
 {
   "private": true,
-  "workspaces": ["contracts", "poster"]
+  "workspaces": ["contracts", "poster"],
+  "license": "MIT"
 }

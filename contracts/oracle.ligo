@@ -1,10 +1,16 @@
+type callbackResponse is record
+    price: nat; // FixedPoint to 6
+    symbol: string;
+    senderAddress: address;
+end;
+
 type request is record
-  callback : contract(string);
-  assetSymbol: string;
+    callback : contract(callbackResponse);
+    symbol: string;
 end
 
 type action is
-| SetPrice of (string * string)
+| SetPrice of (string * nat)
 | GetPrice of (request)
 | SetPaused of (bool)
 | SetPoster of (address)
@@ -12,8 +18,8 @@ type action is
 type symbol is string;
 
 type assetInfo is record
-    price: string;
-    blockTimestamp: timestamp;
+    price: nat; // FixedPoint to 6
+    lastUpdateTimestamp: timestamp;
 end
 
 type store is record 
@@ -37,15 +43,21 @@ function getPrice(const r: request; var store: store): return is
             then failwith(pausedError);
             else skip;
 
-        const asset: assetInfo = case store.assets[r.assetSymbol] of          
+        const asset: assetInfo = case store.assets[r.symbol] of          
             | Some(asset) -> asset
             | None -> (failwith(failedToGetPrice): assetInfo)
         end;
 
-        const operations: list(operation) = list [Tezos.transaction(asset.price, 0mutez, r.callback)]
+        const response: callbackResponse = record [
+            price = asset.price;
+            symbol = r.symbol;
+            senderAddress = Tezos.sender;
+        ];
+
+        const operations: list(operation) = list [Tezos.transaction(response, 0mutez, r.callback)]
     } with(operations, store);
 
-function setPrice(const symbol: string; const value: string; var store : store) : return is
+function setPrice(const symbol: string; const value: nat; var store : store) : return is
     block {
         if (sender =/= store.poster) 
         then failwith(unauthorized);
@@ -57,7 +69,7 @@ function setPrice(const symbol: string; const value: string; var store : store) 
 
         store.assets[symbol] := record 
             price = value; 
-            blockTimestamp = now; 
+            lastUpdateTimestamp = now; 
         end;
     } with (emptyOps, store);
 
