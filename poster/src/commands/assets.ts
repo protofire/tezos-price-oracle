@@ -5,7 +5,7 @@ export default class Assets extends Command {
   static description = 'Send prices updates from coinbase'
 
   static examples = [
-    `$ poster fetch`,
+    `$ tezos-poster fetch`,
   ]
 
   static flags = {

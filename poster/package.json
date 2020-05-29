@@ -1,10 +1,10 @@
 {
-  "name": "poster",
-  "description": "Simple application to pull prices from a set of source feeds and post them to the blockchain",
+  "name": "tezos-poster",
+  "description": "Simple application to pull prices from coingecko and post them to the Tezos blockchain",
   "version": "0.0.0",
   "author": "Mariano Aguero @mariano-aguero",
   "bin": {
-    "poster": "./bin/run"
+    "tezos-poster": "./bin/run"
   },
   "bugs": "https://github.com/protofire/tezos-price-oracle/issues",
   "dependencies": {
@@ -51,7 +51,7 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "poster",
+    "bin": "tezos-poster",
     "plugins": [
       "@oclif/plugin-help"
     ]

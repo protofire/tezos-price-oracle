@@ -6,6 +6,10 @@ interface asset {
     price: string
 }
 
+const getExpMantissa = (float: number): number => {
+    return Math.floor(float * 1.0e6);
+}  
+
 export const fetchAssets = async (): Promise<asset[]> => {
     const rp = require('request-promise')
     const tezosRequestOptions = {
@@ -46,7 +50,8 @@ export const updateAssets = async (assets: asset[]) => {
 
     for (let asset of assets) {
         const {symbol, price} = asset
-        const operation = await contract.methods.setPrice(symbol, `${price}`).send()
+        const priceFixedPoint = getExpMantissa(parseFloat(price))
+        const operation = await contract.methods.setPrice(symbol, priceFixedPoint).send()
         await operation.confirmation()
     }
 }

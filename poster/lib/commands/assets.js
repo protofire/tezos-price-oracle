@@ -17,7 +17,7 @@ let Assets = /** @class */ (() => {
     }
     Assets.description = 'Send prices updates from coinbase';
     Assets.examples = [
-        `$ poster fetch`,
+        `$ tezos-poster fetch`,
     ];
     Assets.flags = {
         help: command_1.flags.help({ char: 'h' }),

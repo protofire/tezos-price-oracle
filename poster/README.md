@@ -1,12 +1,12 @@
-poster
+tezos-poster
 ======
 
-Simple application to pull prices from a set of source feeds and post them to the blockchain
+Simple application to pull prices from coingecko and post them to the Tezos blockchain
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/poster.svg)](https://npmjs.org/package/poster)
-[![Downloads/week](https://img.shields.io/npm/dw/poster.svg)](https://npmjs.org/package/poster)
-[![License](https://img.shields.io/npm/l/poster.svg)](https://github.com/protofire/tezos-price-oracle/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/tezos-poster.svg)](https://npmjs.org/package/tezos-poster)
+[![Downloads/week](https://img.shields.io/npm/dw/tezos-poster.svg)](https://npmjs.org/package/tezos-poster)
+[![License](https://img.shields.io/npm/l/tezos-poster.svg)](https://github.com/protofire/tezos-price-oracle/blob/master/poster/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -15,46 +15,47 @@ Simple application to pull prices from a set of source feeds and post them to th
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g poster
-$ poster COMMAND
+$ npm install -g tezos-poster
+$ tezos-poster COMMAND
 running command...
-$ poster (-v|--version|version)
-poster/0.0.0 linux-x64 node-v12.13.0
-$ poster --help [COMMAND]
+$ tezos-poster (-v|--version|version)
+tezos-poster/0.0.0 linux-x64 node-v12.13.0
+$ tezos-poster --help [COMMAND]
 USAGE
-  $ poster COMMAND
+  $ tezos-poster COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`poster assets [FILE]`](#poster-assets-file)
-* [`poster help [COMMAND]`](#poster-help-command)
+* [`tezos-poster assets`](#poster-assets-file)
+* [`tezos-poster help [COMMAND]`](#tezos-poster-help-command)
 
-## `poster assets [FILE]`
+## `tezos-poster assets`
 
-Send prices updates from coinbase
+Send prices updates from coingecko
 
 ```
 USAGE
-  $ poster assets [FILE]
+  $ tezos-poster assets
 
 OPTIONS
   -h, --help  show CLI help
 
 EXAMPLE
-  $ poster fetch
+  $ MNEMONIC="lol crucial lol blush phone private found apple lol star minute distance twice float fabric" SECRET="b0b126e2454df1984cedff01444ac202eaaa0f4d" PKH="tz1NBNvSzgkva2km7VXbEmdKEbS48KerM8Rw" PASSWORD="1234412" EMAIL="motiakmb.sdfsdfsd@tezos.example.org" TEZOS_RPC="https://api.tez.ie/rpc/carthagenet/" ORACLE_ADDRESS="KT1FfXi4UEZfceSd4k7ZXpxkAeFxXDYxvqP9" tezos-poster assets
+
 ```
 
 _See code: [src/commands/assets.ts](https://github.com/protofire/tezos-price-oracle/blob/v0.0.0/src/commands/assets.ts)_
 
-## `poster help [COMMAND]`
+## `tezos-poster help [COMMAND]`
 
-display help for poster
+display help for tezos-poster
 
 ```
 USAGE
-  $ poster help [COMMAND]
+  $ tezos-poster help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
