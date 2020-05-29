@@ -28,7 +28,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`tezos-poster assets`](#poster-assets-file)
+* [`tezos-poster assets`](#tezos-poster-assets)
 * [`tezos-poster help [COMMAND]`](#tezos-poster-help-command)
 
 ## `tezos-poster assets`
@@ -43,8 +43,10 @@ OPTIONS
   -h, --help  show CLI help
 
 EXAMPLE
-  $ MNEMONIC="lol crucial lol blush phone private found apple lol star minute distance twice float fabric" SECRET="b0b126e2454df1984cedff01444ac202eaaa0f4d" PKH="tz1NBNvSzgkva2km7VXbEmdKEbS48KerM8Rw" PASSWORD="1234412" EMAIL="motiakmb.sdfsdfsd@tezos.example.org" TEZOS_RPC="https://api.tez.ie/rpc/carthagenet/" ORACLE_ADDRESS="KT1FfXi4UEZfceSd4k7ZXpxkAeFxXDYxvqP9" tezos-poster assets
-
+  $ MNEMONIC="lol crucial lol blush phone private found apple lol star minute distance twice float fabric" 
+  SECRET="b0b126e2454df1984cedff01444ac202eaaa0f4d" PKH="tz1NBNvSzgkva2km7VXbEmdKEbS48KerM8Rw" PASSWORD="1234412" 
+  EMAIL="motiakmb.sdfsdfsd@tezos.example.org" TEZOS_RPC="https://api.tez.ie/rpc/carthagenet/" 
+  ORACLE_ADDRESS="KT1FfXi4UEZfceSd4k7ZXpxkAeFxXDYxvqP9"  tezos-poster assets
 ```
 
 _See code: [src/commands/assets.ts](https://github.com/protofire/tezos-price-oracle/blob/v0.0.0/src/commands/assets.ts)_

@@ -5,8 +5,5 @@ export default class Assets extends Command {
     static flags: {
         help: import("@oclif/parser/lib/flags").IBooleanFlag<void>;
     };
-    static args: {
-        name: string;
-    }[];
     run(): Promise<void>;
 }

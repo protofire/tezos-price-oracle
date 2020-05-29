@@ -3,6 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateAssets = exports.fetchAssets = void 0;
 const taquito_1 = require("@taquito/taquito");
 const signer_1 = require("@taquito/signer");
+const getExpMantissa = (float) => {
+    return Math.floor(float * 1.0e6);
+};
 exports.fetchAssets = async () => {
     const rp = require('request-promise');
     const tezosRequestOptions = {
@@ -37,7 +40,8 @@ exports.updateAssets = async (assets) => {
     const contract = await taquito_1.Tezos.contract.at(oracleAddress);
     for (let asset of assets) {
         const { symbol, price } = asset;
-        const operation = await contract.methods.setPrice(symbol, `${price}`).send();
+        const priceFixedPoint = getExpMantissa(parseFloat(price));
+        const operation = await contract.methods.setPrice(symbol, priceFixedPoint).send();
         await operation.confirmation();
     }
 };
