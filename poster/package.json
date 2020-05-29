@@ -1,7 +1,7 @@
 {
   "name": "tezos-poster",
   "description": "Simple application to pull prices from coingecko and post them to the Tezos blockchain",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Mariano Aguero @mariano-aguero",
   "bin": {
     "tezos-poster": "./bin/run"
@@ -45,7 +45,10 @@
   ],
   "homepage": "https://github.com/protofire/tezos-price-oracle",
   "keywords": [
-    "oclif"
+    "oclif",
+    "oracle",
+    "tezos",
+    "blockchain"
   ],
   "license": "MIT",
   "main": "lib/index.js",

@@ -19,7 +19,7 @@ $ npm install -g tezos-poster
 $ tezos-poster COMMAND
 running command...
 $ tezos-poster (-v|--version|version)
-tezos-poster/0.0.0 linux-x64 node-v12.13.0
+tezos-poster/0.0.1 linux-x64 node-v12.13.0
 $ tezos-poster --help [COMMAND]
 USAGE
   $ tezos-poster COMMAND
@@ -49,7 +49,7 @@ EXAMPLE
   ORACLE_ADDRESS="KT1FfXi4UEZfceSd4k7ZXpxkAeFxXDYxvqP9"  tezos-poster assets
 ```
 
-_See code: [src/commands/assets.ts](https://github.com/protofire/tezos-price-oracle/blob/v0.0.0/src/commands/assets.ts)_
+_See code: [src/commands/assets.ts](https://github.com/protofire/tezos-price-oracle/blob/v0.0.1/src/commands/assets.ts)_
 
 ## `tezos-poster help [COMMAND]`
 
