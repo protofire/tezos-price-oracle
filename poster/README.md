@@ -19,7 +19,7 @@ $ npm install -g tezos-poster
 $ tezos-poster COMMAND
 running command...
 $ tezos-poster (-v|--version|version)
-tezos-poster/0.0.1 linux-x64 node-v12.13.0
+tezos-poster/0.0.1 linux-x64 node-v8.11.3
 $ tezos-poster --help [COMMAND]
 USAGE
   $ tezos-poster COMMAND
